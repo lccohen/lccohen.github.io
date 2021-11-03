@@ -1,0 +1,59 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+
+library(tidyverse)
+library(plotly)
+library(p8105.datasets)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+```{r}
+data("instacart")
+```
+
+### Chart A
+
+```{r}
+instacart %>% 
+  filter(aisle == "baking ingredients") %>% 
+  count(product_name) %>% 
+  filter(n>100) %>% 
+  mutate(product_name = fct_reorder(product_name, n)) %>%
+  plot_ly(x = ~product_name, y = ~n, color = ~product_name, type = "bar", colors = "viridis")
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+instacart %>%
+  filter(product_name %in% c("Light Brown Sugar", "Pure Baking Soda", "Cane Sugar")) %>%
+  plot_ly (x = ~product_name, y = ~order_hour_of_day, color = ~product_name, type = "box", colors = "viridis")
+```
+
+### Chart C
+
+```{r}
+instacart %>% 
+  filter(aisle == "baking ingredients") %>%
+  mutate(order_dow = recode(order_dow,
+        `0` = "Sunday", `1` = "Monday", `2` = "Tuesday" ,`3` = "Wednesday", 
+        `4` = "Thursday", `5` = "Friday", `6` = "Saturday"),
+        order_dow = factor(order_dow, levels = c("Sunday", "Monday", "Tuesday" ,"Wednesday", 
+        "Thursday", "Friday", "Saturday"), ordered = TRUE)
+  ) %>% 
+  plot_ly (x = ~order_dow, y = ~order_hour_of_day, color = ~order_dow, type = "violin", colors = "viridis")
+```
+
