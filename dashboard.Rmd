@@ -1,5 +1,5 @@
 ---
-title: "Dashboard"
+title: "Instacart Dashboard"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -21,7 +21,7 @@ Column {data-width=650}
 data("instacart")
 ```
 
-### Chart A
+### Number of Items Ordered for Products Ordered Over 100 Times in Baking Ingredients Aisle
 
 ```{r}
 instacart %>% 
@@ -35,7 +35,7 @@ instacart %>%
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Distribution of Order Hour of Day for 3 Most Popular Items in Baking Ingredients Aisle
 
 ```{r}
 instacart %>%
@@ -43,7 +43,7 @@ instacart %>%
   plot_ly (x = ~product_name, y = ~order_hour_of_day, color = ~product_name, type = "box", colors = "viridis")
 ```
 
-### Chart C
+### Distribution of Order Hour of Day by Order Day of Week in Baking Ingredients Aisle
 
 ```{r}
 instacart %>% 
