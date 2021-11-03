@@ -1,0 +1,9 @@
+---
+title: "About Me"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+My name is Lauren Cohen, and I am a Master of Public Health candidate at the Columbia University Mailman School of Public Health. For more information about my academic and professional experience, here's my [Experience](experience.html) page. 

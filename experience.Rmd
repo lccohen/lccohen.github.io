@@ -1,0 +1,32 @@
+---
+title: "Academic and Professional Experience"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+## Education
+
+Columbia University, Mailman School of Public Health |  Master of Public Health in Epidemiology, Certificate in Applied Biostatistics and Public Health Data Science (Expected May 2022)
+
+University of Pennsylvania, College of Arts and Science |  Bachelor of Arts in Psychology (May 2017)
+
+## Professional Experience
+
+InCrowd, Inc. | Project Manager (2017 - 2019)
+
+* Managed operational aspects of US and global market research projects for pharmaceutical and biotechnology companies; ensured projects were completed on time, within budget, and adhered to client specifications
+* Developed and executed project plans by working cross-functionally with internal teams, strategically selecting third-party vendors, and overseeing project budgets
+* Collaborated with third-party vendors throughout project execution by approving bids, communicating project specifications, providing daily status updates, and reconciling final costs
+* Conceptualized and coordinated the development of various reports that improved project management workflow
+
+University of Pennsylvania, Department of Psychology | Student Research Assistant (2016 - 2017)
+
+* Recruited people with inflammatory bowel disease (IBD) to participate in a study of a self-help workbook intended to improve health-related quality of life for individuals with IBD
+* Monitored data collection in Qualtrics, tracked participant adherence and attrition, and assisted with analysis of preliminary data
+
+Drexel University, Center for Family Intervention Science | Research Assistant (2016 - 2017)
+
+* Reviewed tapes of therapy sessions from a clinical trial and coded therapist adherence
+* Conducted literature reviews, verified and cleaned data, and performed analyses using SPSS
