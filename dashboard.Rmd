@@ -35,10 +35,11 @@ instacart %>%
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Distribution of order hour of day for 3 most popular items in baking ingredients aisle
+### Distribution of order hour of day for 3 most popular products in baking ingredients aisle
 
 ```{r}
 instacart %>%
+  filter(aisle == "baking ingredients") %>%
   filter(product_name %in% c("Light Brown Sugar", "Pure Baking Soda", "Cane Sugar")) %>%
   plot_ly (x = ~product_name, y = ~order_hour_of_day, color = ~product_name, type = "box", colors = "viridis")
 ```
